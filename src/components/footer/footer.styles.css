@@ -1,0 +1,18 @@
+.footer {
+    background-color: hsl(260, 8%, 14%);
+    text-align: center;
+    padding: 2.25rem;
+}
+
+.footer-logo {
+    margin-bottom: 2.25rem;
+    line-height: 1;
+}
+
+@media(min-width: 900px) and (max-width: 1440px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

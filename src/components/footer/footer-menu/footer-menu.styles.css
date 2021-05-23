@@ -1,0 +1,11 @@
+.footer-menu {
+    margin-bottom: 2.5rem;
+}
+
+@media(min-width: 900px) and (max-width: 1440px) {
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    }
+}

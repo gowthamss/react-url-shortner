@@ -1,0 +1,19 @@
+.menu-list {
+    margin-bottom: 2rem;
+}
+
+.menu-header {
+    margin-bottom: 1rem;
+}
+
+.menu-link {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+@media(min-width: 900px) and (max-width: 1440px) {
+    .menu-list {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,29 @@
+/* .bg-container {
+    height: 65vh;
+} */
+
+
+/* .bg-illustration {
+    background-image: url('../../assets/images/illustration-working-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 0;
+    padding: 0;
+    padding-bottom: calc(100% * 3 / 4);
+    box-sizing: content-box;
+} */
+
+@media (min-wdith: 540px) and (max-width: 900px) {
+    .bg-illustration {
+        height: 70vh;
+    }
+}
+
+@media (min-wdith: 900px) and (max-width: 1440px) {
+    .bg-container {
+        height: 85px;
+    }
+    .bg-illustration {
+        background-image: url('../../assets/images/illustration-working-desktop.svg');
+    }
+}
