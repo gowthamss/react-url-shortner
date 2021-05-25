@@ -1,0 +1,18 @@
+.statastics-container {
+    padding: 1.25rem;
+    background: #f2f2f2cb;
+}
+
+.statastics-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: hsl(255, 11%, 22%);
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: hsl(257, 7%, 63%);
+    font-size: 14px;
+    padding: 0 2rem;
+}

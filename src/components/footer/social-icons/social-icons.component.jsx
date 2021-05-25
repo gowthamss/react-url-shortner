@@ -10,8 +10,13 @@ const socialIcons = [facebookLogo, twitterLogo, pinterestLogo, instagramLogo];
 const SocialIcons = () => {
     return (
         <div className="social-icon-div">
-            {socialIcons.map((icon) => (
-                <img className="social-icon" src={icon} alt="social icon" />
+            {socialIcons.map((icon, index) => (
+                <img
+                    className="social-icon"
+                    key={index}
+                    src={icon}
+                    alt="social icon"
+                />
             ))}
         </div>
     );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ActionButton = styled.button`
+export const ActionButton = styled.button `
     font-size: 18px;
     font-weight: 500;
     background-color: hsl(180, 66%, 49%);
@@ -11,7 +11,7 @@ export const ActionButton = styled.button`
     border: none;
 `;
 
-export const LinkButton = styled.a`
+export const LinkButton = styled.a `
     font-size: 14px;
     font-weight: ${(props) => (props.header ? "bold" : "500")};
     color: ${(props) =>
@@ -19,14 +19,14 @@ export const LinkButton = styled.a`
     text-transform: capitalize;
 `;
 
-export const LogoAndCardHeading = styled.h2`
+export const LogoAndCardHeading = styled.h2 `
     font-size: ${(props) =>
         props.logo ? "32px" : props.footer ? "14px" : "24px"};
     color: ${(props) => (props.header ? "hsl(255, 11%, 22%)" : "white")};
     font-weight: 500;
 `;
 
-export const MainInput = styled.input`
+export const MainInput = styled.input `
     font-size: 14px;
     background: white;
     border: none;

@@ -1,0 +1,20 @@
+.get-started-container {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url('../../../assets/images/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+}
+
+.title {
+    color: white;
+    margin-bottom: 1.25rem;
+    font-size: 22px;
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    .get-started-container {
+        background-image: url('../../../assets/images/bg-boost-desktop.svg');
+        background-repeat: no-repeat;
+    }
+}

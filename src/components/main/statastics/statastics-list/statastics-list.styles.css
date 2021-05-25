@@ -1,0 +1,32 @@
+.card-container {
+    text-align: center;
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    background: hsl(260, 8%, 14%);
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-bottom: 1.75rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-heading {
+    color: hsl(255, 11%, 22%);
+    margin-bottom: 1rem;
+    font-size: 22px;
+}
+
+.card-content {
+    color: hsl(257, 7%, 63%);
+    font-size: 14px;
+}
