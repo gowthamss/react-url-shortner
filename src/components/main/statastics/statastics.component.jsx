@@ -35,9 +35,11 @@ const Statastics = () => (
             Track how your links are performing across the web with out advanced
             statastics dashboard.
         </p>
-        {content.map((cardData) => (
-            <StatasticsList cardData={cardData} />
-        ))}
+        <div className="card-container">
+            {content.map((cardData, index) => (
+                <StatasticsList index={index} cardData={cardData} />
+            ))}
+        </div>
     </div>
 );
 

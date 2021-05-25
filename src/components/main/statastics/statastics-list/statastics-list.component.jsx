@@ -2,8 +2,8 @@ import React from "react";
 import "./statastics-list.styles.css";
 import { LogoAndCardHeading } from "../../../styled-components/styled.component";
 
-const StatasticsList = ({ cardData }) => (
-    <div className="card-container">
+const StatasticsList = ({ cardData, index }) => (
+    <div className={`card`}>
         <div className="image-container">
             <img src={cardData[0]} alt="icon" />
         </div>

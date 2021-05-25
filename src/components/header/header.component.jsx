@@ -1,9 +1,10 @@
 import React from "react";
 import "./header.styles.css";
+import LinkInput from "./link-input/link-input.component";
 
 const Header = () => {
     return (
-        <React.Fragment>
+        <div className="header">
             <div className="bg-illustration">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -454,7 +455,8 @@ const Header = () => {
             </div>
             {/*<div className="bg-container">
     </div> */}
-        </React.Fragment>
+            <LinkInput />
+        </div>
     );
 };
 

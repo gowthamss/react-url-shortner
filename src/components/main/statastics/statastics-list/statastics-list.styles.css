@@ -1,4 +1,4 @@
-.card-container {
+.card {
     text-align: center;
     background: white;
     padding: 2.5rem;
@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 8px;
+}
+
+img {
+    background-size: 40px;
 }
 
 .image-container {
@@ -29,4 +34,13 @@
 .card-content {
     color: hsl(257, 7%, 63%);
     font-size: 14px;
+}
+
+@media(min-width: 900px) and (max-width: 1440px) {
+    .card {
+        align-items: flex-start;
+    }
+    .card-content {
+        text-align: left;
+    }
 }
