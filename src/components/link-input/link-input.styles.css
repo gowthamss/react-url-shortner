@@ -1,10 +1,10 @@
 .input-container {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .input-container div {
     background-color: hsl(257, 27%, 26%);
-    background-image: url('../../../assets/images/bg-shorten-mobile.svg');
+    background-image: url('../../assets/images/bg-shorten-mobile.svg');
     background-repeat: no-repeat;
     background-position: right;
     display: flex;
@@ -19,8 +19,12 @@
 }
 
 @media (min-width: 900px) and (max-width: 1440px) {
+    .input-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     .input-container div {
-        background-image: url('../../../assets/images/bg-shorten-desktop.svg');
+        background-image: url('../../assets/images/bg-shorten-desktop.svg');
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-gap: 1rem;
@@ -28,8 +32,10 @@
     }
     .shorten-input {
         grid-column: 1 / -3;
+        height: 48px;
     }
     .shorten-btn {
         grid-column: span 2;
+        height: 48px !important;
     }
 }

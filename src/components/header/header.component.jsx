@@ -1,11 +1,12 @@
 import React from "react";
 import "./header.styles.css";
-import LinkInput from "./link-input/link-input.component";
+import Navbar from "./navbar/navbar.component";
 
 const Header = () => {
     return (
         <div className="header">
-            <div className="bg-illustration">
+            <Navbar />
+            {/*<div className="bg-illustration">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="733"
@@ -452,10 +453,7 @@ const Header = () => {
                         />
                     </g>
                 </svg>
-            </div>
-            {/*<div className="bg-container">
     </div> */}
-            <LinkInput />
         </div>
     );
 };

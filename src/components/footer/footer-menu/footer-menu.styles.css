@@ -6,7 +6,7 @@
     .footer-menu {
         display: flex;
         justify-content: center;
-        gap: 5rem;
-        margin-left: 8em;
+        gap: 3rem;
+        margin-left: 6em;
     }
 }

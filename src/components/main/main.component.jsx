@@ -6,7 +6,6 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                {/*<LinkInput />*/}
                 <Statastics />
                 <GetStarted />
             </div>

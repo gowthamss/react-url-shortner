@@ -1,5 +1,5 @@
 .statastics-container {
-    padding: 1.25rem;
+    padding: 1rem 1.5rem;
     background: #f2f2f2cb;
 }
 
@@ -20,6 +20,11 @@
 }
 
 @media(min-width: 900px) and (max-width: 1440px) {
+    .statastics-container {
+        padding-top: 9rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     .statastics-title {
         font-size: 32px;
         margin-bottom: 1rem;

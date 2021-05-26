@@ -9,5 +9,12 @@
 }
 
 .App {
-    background: #959595;
+    background: white;
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    /* .App {
+        padding-left: 10%;
+        padding-right: 10%;
+    } */
 }

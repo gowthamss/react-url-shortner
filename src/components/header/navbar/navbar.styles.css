@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+.desktop-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-link {
+    font-size: 14px;
+    margin-right: 1.5rem;
+}
+
+.nav-link-btn {
+    font-size: 14px !important;
+}
+
+.mobile-nav-container {
+    display: none;
+}

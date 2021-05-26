@@ -1,8 +1,5 @@
 import React from "react";
-import {
-    MainInput,
-    ActionButton,
-} from "../../styled-components/styled.component";
+import { MainInput, ActionButton } from "../styled-components/styled.component";
 import "./link-input.styles.css";
 
 const LinkInput = () => {

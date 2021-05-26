@@ -9,6 +9,7 @@ export const ActionButton = styled.button `
     border-radius: ${(props) => (props.pill ? "24px" : "8px")};
     outline: none;
     border: none;
+    text-transform: capitalize;
 `;
 
 export const LinkButton = styled.a `
@@ -23,7 +24,7 @@ export const LogoAndCardHeading = styled.h2 `
     font-size: ${(props) =>
         props.logo ? "32px" : props.footer ? "14px" : "24px"};
     color: ${(props) => (props.header ? "hsl(255, 11%, 22%)" : "white")};
-    font-weight: 500;
+    font-weight: ${props => props.logo ? 'bold' : 500};
 `;
 
 export const MainInput = styled.input `
@@ -32,4 +33,5 @@ export const MainInput = styled.input `
     border: none;
     border-radius: 5px;
     padding-left: 8px;
+    outline: none;    
 `;
