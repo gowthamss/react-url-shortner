@@ -24,7 +24,7 @@
     }
 }
 
-@media (min-wdith: 900px) and (max-width: 1440px) {
+@media (min-width: 900px) and (max-width: 1440px) {
     .header {
         padding-left: 10%;
         padding-right: 10%;

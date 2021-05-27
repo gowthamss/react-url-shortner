@@ -1,3 +1,7 @@
+.card-container {
+    position: relative;
+}
+
 .statastics-container {
     padding: 1rem 1.5rem;
     background: #f2f2f2cb;
@@ -19,11 +23,22 @@
     line-height: 1.7;
 }
 
+.ribbon {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    height: 6px;
+    width: 100%;
+    transform: rotate(90deg);
+    background-color: hsl(180, 66%, 49%);
+}
+
 @media(min-width: 900px) and (max-width: 1440px) {
     .statastics-container {
-        padding-top: 9rem;
+        /* padding-top: 9rem;
         padding-left: 10%;
-        padding-right: 10%;
+        padding-right: 10%; */
+        padding: 4rem 10%;
     }
     .statastics-title {
         font-size: 32px;
@@ -32,11 +47,11 @@
     .description {
         padding: 0 15rem;
     }
-    /* .card-container {
-        height: 300px;
+    .card-container {
+        height: 22rem;
         display: grid;
-        grid-column-gap: 1.5rem;        
+        grid-column-gap: 1.5rem;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 40px 1fr 40px;
-    } */
+        grid-template-rows: 40px 40px 1fr 40px 40px;
+    }
 }

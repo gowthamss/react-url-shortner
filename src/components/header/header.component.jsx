@@ -1,11 +1,13 @@
 import React from "react";
 import "./header.styles.css";
 import Navbar from "./navbar/navbar.component";
+import MobileNavigation from "./navbar/mobile-navigation/mobile-navigation.component";
 
 const Header = () => {
     return (
         <div className="header">
             <Navbar />
+            <MobileNavigation />
             {/*<div className="bg-illustration">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

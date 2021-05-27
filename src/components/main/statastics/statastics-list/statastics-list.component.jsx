@@ -3,7 +3,7 @@ import "./statastics-list.styles.css";
 import { LogoAndCardHeading } from "../../../styled-components/styled.component";
 
 const StatasticsList = ({ cardData, index }) => (
-    <div className={`card`}>
+    <div className={`card card${index}`} key={index}>
         <div className="image-container">
             <img src={cardData[0]} alt="icon" />
         </div>

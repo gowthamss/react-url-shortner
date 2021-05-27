@@ -5,7 +5,7 @@ import Statastics from "./statastics/statastics.component";
 class Main extends React.Component {
     render() {
         return (
-            <div>
+            <div className="main">
                 <Statastics />
                 <GetStarted />
             </div>

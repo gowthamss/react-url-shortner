@@ -21,6 +21,15 @@
     font-size: 14px !important;
 }
 
-.mobile-nav-container {
+.desktop-nav-container {
     display: none;
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    .mobile-nav-container {
+        display: none;
+    }
+    .desktop-nav-container {
+        display: block;
+    }
 }

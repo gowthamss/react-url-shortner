@@ -39,6 +39,17 @@ img {
 @media(min-width: 900px) and (max-width: 1440px) {
     .card {
         align-items: flex-start;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .card0 {
+        grid-row: 1 / 4;
+    }
+    .card1 {
+        grid-row: 2 / 5;
+    }
+    .card2 {
+        grid-row: 3 / 6;
     }
     .card-content {
         text-align: left;

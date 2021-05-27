@@ -37,8 +37,9 @@ const Statastics = () => (
         </p>
         <div className="card-container">
             {content.map((cardData, index) => (
-                <StatasticsList index={index} cardData={cardData} />
+                <StatasticsList key={index} index={index} cardData={cardData} />
             ))}
+            {/*<div className="ribbon"></div>*/}
         </div>
     </div>
 );
