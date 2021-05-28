@@ -1,0 +1,28 @@
+.hero {
+    padding: 1.5rem 0;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-heading {
+    color: hsl(255, 11%, 22%);
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: hsl(257, 7%, 63%);
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

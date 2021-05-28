@@ -7,15 +7,15 @@ import {
 import HamburgerMenu from "./hamburger-menu/hamburger-menu.component";
 import "./navbar.styles.css";
 
-const Navbar = () => (
+const Navbar = ({ toggleShowMenu }) => (
     <div className="nav">
         <div className="navbar">
-            <LogoAndCardHeading logo header>
+            <LogoAndCardHeading logo header className="logo">
                 Shortly
             </LogoAndCardHeading>
             {/* Mobile Navigation */}
             <div className="mobile-nav-container">
-                <HamburgerMenu />
+                <HamburgerMenu toggleShowMenu={toggleShowMenu} />
             </div>
             <div className="desktop-nav-container">
                 <div className="nav-list">

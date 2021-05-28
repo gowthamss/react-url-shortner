@@ -5,6 +5,10 @@
     gap: 2.25rem;
 }
 
+.logo {
+    opacity: 0.9;
+}
+
 .desktop-nav-container {
     display: flex;
     justify-content: space-between;
@@ -30,6 +34,6 @@
         display: none;
     }
     .desktop-nav-container {
-        display: block;
+        display: flex;
     }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./statastics-list.styles.css";
-import { LogoAndCardHeading } from "../../../styled-components/styled.component";
 
 const StatasticsList = ({ cardData, index }) => (
     <div className={`card card${index}`} key={index}>

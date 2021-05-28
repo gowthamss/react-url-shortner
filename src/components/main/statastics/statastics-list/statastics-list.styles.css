@@ -1,8 +1,8 @@
 .card {
     text-align: center;
     background: white;
-    padding: 2.5rem;
-    margin-bottom: 3rem;
+    padding: 2rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@ img {
 .card-heading {
     color: hsl(255, 11%, 22%);
     margin-bottom: 1rem;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .card-content {
@@ -41,6 +41,7 @@ img {
         align-items: flex-start;
         text-align: left;
         margin-bottom: 0;
+        padding: 1.5rem;
     }
     .card0 {
         grid-row: 1 / 4;
