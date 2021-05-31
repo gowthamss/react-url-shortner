@@ -3,3 +3,12 @@
     gap: 1rem;
     justify-content: center;
 }
+
+.social-icon {
+    cursor: pointer;
+}
+
+.social-icon:hover path,
+.social-icon:active {
+    fill: hsl(180, 66%, 49%);
+}

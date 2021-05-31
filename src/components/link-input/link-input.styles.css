@@ -1,5 +1,5 @@
 .input-container {
-    padding: 1rem 0;
+    padding: 1rem 1.5rem;
 }
 
 .input-container div {
@@ -21,7 +21,7 @@
 @media (min-width: 900px) and (max-width: 1440px) {
     .input-container {
         position: relative;
-        bottom: -90px;
+        /* bottom: -90px; */
         padding: 1rem 10%;
     }
     .input-container div {

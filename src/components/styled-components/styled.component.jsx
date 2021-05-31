@@ -10,6 +10,12 @@ export const ActionButton = styled.button `
     outline: none;
     border: none;
     text-transform: capitalize;
+    cursor: pointer;
+
+    :hover,
+    :active {
+        opacity: 0.8;
+    }
 `;
 
 export const LinkButton = styled.a `
@@ -18,13 +24,18 @@ export const LinkButton = styled.a `
     color: ${(props) =>
         props.header ? "hsl(0, 0%, 75%)" : "hsl(257, 7%, 63%)"};
     text-transform: capitalize;
+    cursor: pointer;
+    :hover,
+    :active {
+        color: ${props => props.header ? "hsl(255, 11%, 22%)" : "hsl(180, 66%, 49%)"};
+    }
 `;
 
 export const LogoAndCardHeading = styled.h2 `
     font-size: ${(props) =>
         props.logo ? "32px" : props.footer ? "14px" : "24px"};
     color: ${(props) => (props.header ? "hsl(255, 11%, 22%)" : "white")};
-    font-weight: ${props => props.logo ? 'bold' : 500};
+    font-weight: ${props => props.logo ? 'bold' : 500};    
 `;
 
 export const MainInput = styled.input `
