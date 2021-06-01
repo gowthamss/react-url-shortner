@@ -1,8 +1,8 @@
-.input-container {
+.container {
     padding: 1rem 1.5rem;
 }
 
-.input-container div {
+.input-btn-container {
     background-color: hsl(257, 27%, 26%);
     background-image: url('../../assets/images/bg-shorten-mobile.svg');
     background-repeat: no-repeat;
@@ -14,29 +14,58 @@
     border-radius: 8px;
 }
 
+.link-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .shorten-input {
     height: 42px;
 }
 
+.error {
+    border: 2px solid hsl(0, 87%, 67%) !important;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
 @media (min-width: 900px) and (max-width: 1440px) {
-    .input-container {
+    .container {
         position: relative;
         /* bottom: -90px; */
         padding: 1rem 10%;
     }
-    .input-container div {
+    .input-btn-container {
         background-image: url('../../assets/images/bg-shorten-desktop.svg');
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-gap: 1rem;
         padding: 2.5rem;
     }
-    .shorten-input {
+    .link-input-container {
         grid-column: 1 / -3;
+    }
+    .shorten-input {
+        width: 100%;
         height: 48px;
     }
     .shorten-btn {
         grid-column: span 2;
         height: 48px !important;
+    }
+    .result-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+    }
+    .copy-btn {
+        padding: 0.2rem 1.5rem !important;
     }
 }

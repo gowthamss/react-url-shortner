@@ -6,22 +6,28 @@ import Header from "../../components/header/header.component";
 import Hero from "../../components/hero/hero.component";
 import LinkInput from "../../components/link-input/link-input.component";
 
-class App extends React.Component {
-    constructor() {
-        super();
-    }
+// class App extends React.Component {
+//     constructor() {
+//         super();
+//     }
 
-    render() {
-        return (
-            <div className="App">
-                <Header />
-                <Hero />
-                <LinkInput />
-                <Main />
-                <Footer />
-            </div>
-        );
-    }
+//     render() {
+//         return (
+
+//         );
+//     }
+// }
+
+function App() {
+    return (
+        <div className="App">
+            <Header />
+            <Hero />
+            <LinkInput />
+            <Main />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

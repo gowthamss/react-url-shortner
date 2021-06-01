@@ -1,14 +1,9 @@
 import React from "react";
 import "./hero.styles.css";
 import { ActionButton } from "../styled-components/styled.component";
-import { ReactComponent as HeroImageDesktop } from "../../assets/images/illustration-working-desktop.svg";
-import { ReactComponent as HeroImageMobile } from "../../assets/images/illustration-working-mobile.svg";
 
 const Hero = () => (
     <div className="hero">
-        {/* <div className="hero-img-container">
-            <img src="" alt="person working" className="hero-img" />
-</div> */}
         <div className="bg-img-container">
             <div className="bg-img"></div>
         </div>
