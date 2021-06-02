@@ -1,6 +1,7 @@
 .hero {
     display: flex;
     flex-direction: column;
+    margin-bottom: 6rem;
 }
 
 .bg-img-container {
@@ -46,6 +47,7 @@
         height: 400px;
         padding-left: 10%;
         flex-direction: row-reverse;
+        margin: 0;
     }
     .bg-img-container {
         width: 100%;
