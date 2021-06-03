@@ -1,0 +1,45 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    background: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.provided-link {
+    padding: 1rem;
+    border-bottom: 0.5px solid #ddd;
+}
+
+.generated-short-link {
+    color: hsl(180, 66%, 49%);
+}
+
+.long-short-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    .result-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+    .provided-link {
+        border: none;
+    }
+    .long-short-btn {
+        flex-direction: row;
+        align-items: center;
+    }
+    .copy-btn {
+        padding: 0.2rem 1rem !important;
+        font-size: 14px !important;
+    }
+}

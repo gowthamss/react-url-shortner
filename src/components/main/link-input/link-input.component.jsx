@@ -1,9 +1,7 @@
 import React from "react";
-import {
-    MainInput,
-    ActionButton,
-} from "../../styled-components/styled.component";
 import "./link-input.styles.css";
+import Links from "./links/links.component";
+import LinkForm from "./link-form/link-form.component";
 
 class LinkInput extends React.Component {
     constructor() {
@@ -12,22 +10,23 @@ class LinkInput extends React.Component {
         this.state = {
             error: "",
             linkContent: "",
-            copyState: false,
-            shortUrl: "",
-            generateState: "Shorten It!",
-            apiResult: {},
-            apiResolved: false,
+            btnText: "Shorten It!",
+            multipleShortLinks: [],
         };
     }
 
-    multipleShortLinks = [];
+    onCopyClick = () => {
+        this.setState({ copyState: true });
+    };
 
     onLinkChange = (e) => {
         this.setState({ linkContent: e.target.value, error: "" });
     };
 
-    handleShortLink = () => {
+    handleShortLink = (e) => {
+        e.preventDefault();
         const { linkContent } = this.state;
+        console.log("handle click link contetn ", linkContent);
         if (!linkContent) {
             this.setState({ error: "Please add a link" });
         } else if (
@@ -37,85 +36,59 @@ class LinkInput extends React.Component {
         ) {
             this.setState({ error: "Please enter a valid URL" });
         } else {
-            this.setState({ generateState: "Shortening..." });
             this.getShortLink();
-            this.setState({ error: "" });
         }
     };
 
     getShortLink = async () => {
-        const longUrl = `https://api.shrtco.de/v2/shorten?url=${this.state.linkContent}`;
-
-        const response = await fetch(longUrl);
-        const fetchedShortUrl = await response.json();
-        if (fetchedShortUrl.ok) {
-            this.setState({ apiResult: fetchedShortUrl.result });
+        const { multipleShortLinks, linkContent } = this.state;
+        const longUrl = `https://api.shrtco.de/v2/shorten?url=${linkContent}`;
+        console.log(multipleShortLinks, linkContent, longUrl);
+        const existingLink = multipleShortLinks.find(
+            (shortLink) => shortLink["original_link"] === linkContent
+        );
+        if (!existingLink) {
+            this.setState({ btnText: "Shortening..." });
+            const response = await fetch(longUrl);
+            const fetchedShortUrl = await response.json();
+            if (fetchedShortUrl.ok) {
+                this.setState({
+                    multipleShortLinks: [
+                        ...this.state.multipleShortLinks,
+                        fetchedShortUrl.result,
+                    ],
+                });
+            } else {
+                this.setState({
+                    error: "The short code API is unavailbale at the moment",
+                });
+            }
+            console.log(fetchedShortUrl);
+            this.setState({ btnText: "Shorten It!" });
+            console.log(this.state.multipleShortLinks);
         } else {
-            this.setState({
-                error: "The short code API is unavailbale at the moment",
-            });
+            this.setState({ error: "You already have this link generated." });
         }
-        console.log(fetchedShortUrl);
-        this.setState({ generateState: "Shorten It!" });
-        this.setState({ apiResolved: true });
     };
 
     render() {
-        const { error, linkContent, copyState, shortUrl, generateState } =
-            this.state;
-        const { full_short_link2, original_link } = this.state.apiResult;
+        const { error, copyState, btnText, multipleShortLinks } = this.state;
         return (
             <div className="container">
-                <div className="input-btn-container">
-                    <div className="link-input-container">
-                        <MainInput
-                            className={`${!error ? "" : "error"} shorten-input`}
-                            type="text"
-                            name="shorten-link"
-                            placeholder="Shorten a link here..."
-                            onChange={this.onLinkChange}
-                        ></MainInput>
-                        {error ? (
-                            <span
-                                style={{
-                                    color: "hsl(0, 87%, 67%)",
-                                    fontStyle: "italic",
-                                    fontSize: "12px",
-                                }}
-                            >
-                                {error}
-                            </span>
-                        ) : null}
-                    </div>
-                    <ActionButton
-                        className={`${
-                            generateState.toLowerCase().includes("shortening")
-                                ? "disabled"
-                                : ""
-                        } shorten-btn`}
-                        onClick={this.handleShortLink}
-                    >
-                        {generateState}
-                    </ActionButton>
-                </div>
-                {this.state.apiResolved ? (
-                    <div className="result-container">
-                        <div className="provided-link">{original_link}</div>
-                        <div className="long-short-btn">
-                            <span className="generated-short-link">
-                                {full_short_link2}
-                            </span>
-                            <ActionButton
-                                className="copy-btn"
-                                onClick={() =>
-                                    this.setState({ copyState: true })
-                                }
-                            >
-                                {copyState ? "Copied" : "Copy"}
-                            </ActionButton>
-                        </div>
-                    </div>
-                ) : null}
+                <LinkForm
+                    error={error}
+                    btnText={btnText}
+                    onLinkChange={this.onLinkChange}
+                    handleShortLink={this.handleShortLink}
+                />
+                {multipleShortLinks.map((shortLink, index) => (
+                    <Links
+                        shortLink={shortLink}
+                        key={index}
+                        onCopyClick={this.onCopyClick}
+                        copyState={copyState}
+                    />
+                ))}
             </div>
         );
     }
