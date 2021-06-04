@@ -58,6 +58,13 @@ class LinkInput extends React.Component {
                         fetchedShortUrl.result,
                     ],
                 });
+                localStorage.setItem(
+                    "storedLinks",
+                    JSON.stringify([
+                        ...this.state.multipleShortLinks,
+                        fetchedShortUrl.result,
+                    ])
+                );
             } else {
                 this.setState({
                     error: "The short code API is unavailbale at the moment",
@@ -72,7 +79,14 @@ class LinkInput extends React.Component {
     };
 
     render() {
+        localStorage.clear();
         const { error, copyState, btnText, multipleShortLinks } = this.state;
+        console.log("multiple short links", multipleShortLinks);
+        const storedLinks = JSON.parse(localStorage.getItem("storedLinks"));
+        // if (storedLinks !== null) {
+        //     storedLinks = storedLinks.split(",");
+        //     console.log("stored links", storedLinks);
+        // }
         return (
             <div className="container">
                 <LinkForm
@@ -81,14 +95,18 @@ class LinkInput extends React.Component {
                     onLinkChange={this.onLinkChange}
                     handleShortLink={this.handleShortLink}
                 />
-                {multipleShortLinks.map((shortLink, index) => (
-                    <Links
-                        shortLink={shortLink}
-                        key={index}
-                        onCopyClick={this.onCopyClick}
-                        copyState={copyState}
-                    />
-                ))}
+                {storedLinks
+                    ? storedLinks
+                          .filter((item, index) => index < 5)
+                          .map((shortLink, index) => (
+                              <Links
+                                  shortLink={shortLink}
+                                  key={index}
+                                  onCopyClick={this.onCopyClick}
+                                  copyState={copyState}
+                              />
+                          ))
+                    : null}
             </div>
         );
     }
