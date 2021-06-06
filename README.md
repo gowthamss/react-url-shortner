@@ -32,14 +32,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/desktop1.JPG)
-![](./assets/desktop2.JPG)
-![](./assets/desktop3.JPG)
-![](./assets/desktop4.JPG)
-![](./assets/mobile1.JPG)
-![](./assets/mobile2.JPG)
-![](./assets/mobile3.JPG)
-![](./assets/mobile4.JPG)
+![](./src/assets/desktop1.JPG)
+![](./src/assets/desktop2.JPG)
+![](./src/assets/desktop3.JPG)
+![](./src/assets/desktop4.JPG)
+![](./src/assets/mobile1.JPG)
+![](./src/assets/mobile2.JPG)
+![](./src/assets/mobile3.JPG)
+![](./src/assets/mobile4.JPG)
 
 ### Links
 
