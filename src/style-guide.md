@@ -43,3 +43,15 @@ For the social icons, you can either use the SVGs provided or a font icon librar
 -   [Font Awesome](https://fontawesome.com)
 -   [IcoMoon](https://icomoon.io)
 -   [Ionicons](https://ionicons.com)
+
+Resources:
+
+React ref's: https://reactjs.org/docs/refs-and-the-dom.html
+React forwarding ref's: https://reactjs.org/docs/forwarding-refs.html
+Using multiple react ref's: https://stackoverflow.com/questions/53561913/react-forwarding-multiple-refs
+Using react ref's to change dom element properties: https://stackoverflow.com/questions/39597804/how-i-can-use-refs-to-change-styling-class-in-reactjs
+How to copy to clipboard: https://stackoverflow.com/questions/39501289/in-reactjs-how-to-copy-text-to-clipboard
+How to import images in react: https://stackoverflow.com/questions/39999367/how-do-i-reference-a-local-image-in-react
+How to scale svg's: https://css-tricks.com/scale-svg/
+Browser localstorage: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+Passing and retriving complex data using localstorage: https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage

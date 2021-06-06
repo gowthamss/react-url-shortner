@@ -10,6 +10,7 @@
 .provided-link {
     padding: 1rem;
     border-bottom: 0.5px solid #ddd;
+    word-break: break-word;
 }
 
 .generated-short-link {
@@ -22,6 +23,10 @@
     align-items: stretch;
     gap: 1rem;
     padding: 1rem;
+}
+
+.copy-btn {
+    border-radius: 4px !important;
 }
 
 @media (min-width: 900px) and (max-width: 1440px) {
