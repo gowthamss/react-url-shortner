@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-.social-icon:hover path,
+.social-icon:hover,
 .social-icon:active {
-    fill: hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
 }

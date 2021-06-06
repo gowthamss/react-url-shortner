@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The challenge is to create a landing page for the URL shortening. In this chanllenge we have to use a API to get the original long url that the user has provided and shorten it and make it available to them by giving a copy option.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### The challenge
 
-### `yarn test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   View the optimal layout for the site depending on their device's screen size
+-   Shorten any valid URL
+-   See a list of their shortened links, even after refreshing the browser
+-   Copy the shortened link to their clipboard in a single click
+-   Receive an error message when the `form` is submitted if:
+    -   The `input` field is empty
 
-### `yarn build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](./assets/desktop1.JPG)
+![](./assets/desktop2.JPG)
+![](./assets/desktop3.JPG)
+![](./assets/desktop4.JPG)
+![](./assets/mobile1.JPG)
+![](./assets/mobile2.JPG)
+![](./assets/mobile3.JPG)
+![](./assets/mobile4.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Solution URL: [Add solution URL here](https://github.com/gowthamss/react-url-shortner)
+-   Live Site URL: [Add live site URL here](https://gowthamss.github.io/react-url-shortner/)
 
-### `yarn eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
+-   Mobile-first workflow
+-   [React](https://reactjs.org/) - JS library
+-   [Styled Components](https://styled-components.com/) - For styles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What I learned
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In this challenge, I used React to create my first own challenge. So, I feel more confident using React. And I also used Styed Components for the first time and I loved to use it and continue to use it in the upcoming projects. Also learned about browser storage.
 
-## Learn More
+```js
+<Links
+    key={index}
+    shortLink={shortLink}
+    onCopyClick={this.onCopyClick}
+    ref={{
+        copyLinkRef: this.copyLinkRef,
+        copyBtnRef: this.copyBtnRef,
+    }}
+/>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Continued development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Apply browser storage to store the short link results in the browser to always show some results.
 
-### Code Splitting
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   [Example resource 1](https://reactjs.org/docs/refs-and-the-dom.html) - This helped me use React ref's effectively.
+-   [Example resource 2](https://reactjs.org/docs/forwarding-refs.html) - This will help understand how to pass forward ref's to child component.
+-   [Example resource 3](https://stackoverflow.com/questions/53561913/react-forwarding-multiple-refs) - This helps in how to forward multiple ref's to children.
+-   [Example resource 4](https://stackoverflow.com/questions/39597804/how-i-can-use-refs-to-change-styling-class-in-reactjs) - This helps in styling the React components by using ref's.
+-   [Example resource 5](https://stackoverflow.com/questions/39501289/in-reactjs-how-to-copy-text-to-clipboard) - This stackoverflow post is useful to understad copy to clipboard functionality.
+-   [Example resource 6](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) - This will help in understanding browser local storage.
+-   [Example resource 7](https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage) - A good resource on understanding how to send complex data and retrieve using local storage API.
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Website - [Add your name here](https://www.your-site.com)
+-   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/gowthamss)
+-   Twitter - [@yourusername](https://www.twitter.com/@gowthamss)
