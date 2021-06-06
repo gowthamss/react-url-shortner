@@ -2,7 +2,6 @@ import React from "react";
 import "./link-input.styles.css";
 import Links from "./links/links.component";
 import LinkForm from "./link-form/link-form.component";
-import { ActionButton } from "../../styled-components/styled.component";
 
 class LinkInput extends React.Component {
     constructor() {
@@ -21,8 +20,6 @@ class LinkInput extends React.Component {
     }
 
     onCopyClick = () => {
-        // const copyBtnState = true;
-        // this.setState({ copyState: false });
         const copiedText = this.copyLinkRef.current.innerText;
         navigator.clipboard.writeText(copiedText);
         const btnValue = this.copyBtnRef.current.innerText;
@@ -82,7 +79,7 @@ class LinkInput extends React.Component {
     };
 
     render() {
-        const { error, copyState, btnText, multipleShortLinks } = this.state;
+        const { error, btnText, multipleShortLinks } = this.state;
         return (
             <div className="container">
                 <LinkForm
@@ -92,26 +89,15 @@ class LinkInput extends React.Component {
                     handleShortLink={this.handleShortLink}
                 />
                 {multipleShortLinks.map((shortLink, index) => (
-                    <div className="result-container" key={index}>
-                        <div className="provided-link">
-                            {shortLink.original_link}
-                        </div>
-                        <div className="long-short-btn">
-                            <span
-                                className="generated-short-link"
-                                ref={this.copyLinkRef}
-                            >
-                                {shortLink.full_short_link2}
-                            </span>
-                            <ActionButton
-                                className="copy-btn"
-                                onClick={this.onCopyClick}
-                                ref={this.copyBtnRef}
-                            >
-                                Copy
-                            </ActionButton>
-                        </div>
-                    </div>
+                    <Links
+                        key={index}
+                        shortLink={shortLink}
+                        onCopyClick={this.onCopyClick}
+                        ref={{
+                            copyLinkRef: this.copyLinkRef,
+                            copyBtnRef: this.copyBtnRef,
+                        }}
+                    />
                 ))}
             </div>
         );
