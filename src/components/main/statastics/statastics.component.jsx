@@ -39,7 +39,7 @@ const Statastics = () => (
             {content.map((cardData, index) => (
                 <StatasticsList key={index} index={index} cardData={cardData} />
             ))}
-            {/*<div className="ribbon"></div>*/}
+            <div className="ribbon"></div>
         </div>
     </div>
 );
