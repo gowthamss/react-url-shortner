@@ -92,4 +92,4 @@ Apply browser storage to store the short link results in the browser to always s
 
 -   Website - [Add your name here](https://www.your-site.com)
 -   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/gowthamss)
--   Twitter - [@yourusername](https://www.twitter.com/@gowthamss)
+-   Twitter - [@yourusername](https://www.twitter.com/@Gowthamss15)
